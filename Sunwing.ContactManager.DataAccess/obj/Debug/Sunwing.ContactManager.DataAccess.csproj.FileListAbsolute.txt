@@ -1,0 +1,15 @@
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataAccess\bin\Debug\Sunwing.ContactManager.DataAccess.dll.config
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataAccess\bin\Debug\Sunwing.ContactManager.DataAccess.dll
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataAccess\bin\Debug\Sunwing.ContactManager.DataAccess.pdb
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataAccess\bin\Debug\EntityFramework.dll
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataAccess\bin\Debug\Sunwing.ContactManager.DataModal.dll
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataAccess\bin\Debug\Sunwing.ContactManager.DataModal.pdb
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataAccess\bin\Debug\Sunwing.ContactManager.DataModal.dll.config
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataAccess\bin\Debug\EntityFramework.xml
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataAccess\obj\Debug\Sunwing.ContactManager.DataAccess.csprojAssemblyReference.cache
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataAccess\obj\Debug\Sunwing.ContactManager.DataAccess.csproj.CoreCompileInputs.cache
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataAccess\obj\Debug\Sunwing.ContactManager.DataAccess.csproj.CopyComplete
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataAccess\obj\Debug\Sunwing.ContactManager.DataAccess.dll
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataAccess\obj\Debug\Sunwing.ContactManager.DataAccess.pdb

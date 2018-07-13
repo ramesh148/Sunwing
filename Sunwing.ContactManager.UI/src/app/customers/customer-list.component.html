@@ -1,0 +1,73 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>{{ pageTitle }}</div>
+</div>
+
+<div class='panel-body'>
+    <div class='table-responsive'>
+        <table class='table' *ngIf='customerList && customerList.length'>
+            <tr colsapn="3"><td>  <a (click)="ShowCustomerForm(customer)">Add New</a></td></tr>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Brith Date</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let customer of customerList'>
+                    <td>
+                        <a [routerLink]="['/customers', customer.Id]">{{ customer.FirstName }}</a>
+                    </td>
+                    <td>{{customer.BirthDay}}</td>
+                    <td>{{customer.Email }}</td>
+                    <td>
+                        <a (click)="ShowCustomerForm(customer)">Edit</a>
+                    </td>
+                    <td>
+                        <a (click)="ShowCustomerFormForDelete(customer)">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<hr>
+
+<form #customerForm="ngForm">
+    <div class="container" *ngIf="editCustomer">
+        <h3>{{FormHeader}}</h3>
+
+        <table class="table table-condensed">
+            <tbody>
+                <tr>
+                    <td>First Name</td>
+                    <td>
+                        <input type="text" name="FirstName" [(ngModel)]='FirstName'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>
+                        <input type="text" name="LastName" [(ngModel)]='LastName'>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Email</td>
+                    <td>
+                        <input type="text" name="Email" [(ngModel)]='Email'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="hidden" name="Id" [(ngModel)]='Id'>
+                    </td>
+                    <td>
+                        <input type="button" value="Save" (click)="Save(customerForm)">
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</form>

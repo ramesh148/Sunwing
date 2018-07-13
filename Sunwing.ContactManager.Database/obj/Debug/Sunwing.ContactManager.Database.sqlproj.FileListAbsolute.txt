@@ -1,0 +1,5 @@
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.Database\bin\Debug\Sunwing.ContactManager.Database.dacpac
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.Database\bin\Debug\Sunwing.ContactManager.Database.dll
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.Database\bin\Debug\Sunwing.ContactManager.Database.pdb
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.Database\obj\Debug\Sunwing.ContactManager.Database.dll
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.Database\obj\Debug\Sunwing.ContactManager.Database.pdb

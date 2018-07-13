@@ -1,0 +1,22 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>{{ pageTitle }}</div>
+</div>
+
+<div class='panel-body'>
+    <div class='table-responsive'>
+        <table class='table' ng-if='suppliers && suppliers.length'>
+            <thead>
+                <tr>                   
+                    <th>Name</th>                    
+                    <th>Telephone</th>                                      
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-for='let supplier of suppliers'>                    
+                    <td><a [routerLink]="['/suppliers', supplier.Id]">{{ supplier.FirstName }}</a></td>                                        
+                    <td>{{supplier.Telephone}}</td>                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

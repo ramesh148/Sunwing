@@ -1,0 +1,26 @@
+[
+    {
+        "Id": 1,
+        "FirstName": "Ramesh Babu",
+        "LastName": "Medaramitla",
+        "BirthDay": "2018-06-13T20:55:36.66",
+        "Email": "rameshtest@gmail.com",
+        "IsActive": true,
+        "CreatedBy": "test",
+        "CreatedDate": "2018-07-08T20:55:36.66",
+        "ModifiedBy": null,
+        "ModifiedDate": null
+    },
+    {
+        "Id": 2,
+        "FirstName": "Kishore",
+        "LastName": "Kamatham",
+        "BirthDay": "2018-06-03T20:56:18.24",
+        "Email": "kishoretest@gmail.com",
+        "IsActive": true,
+        "CreatedBy": "test",
+        "CreatedDate": "2018-07-08T20:56:18.24",
+        "ModifiedBy": null,
+        "ModifiedDate": null
+    }
+]

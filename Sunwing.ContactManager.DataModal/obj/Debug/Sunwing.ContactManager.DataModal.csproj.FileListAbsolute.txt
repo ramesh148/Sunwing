@@ -1,0 +1,12 @@
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataModal\bin\Debug\Sunwing.ContactManager.DataModal.dll.config
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataModal\bin\Debug\Sunwing.ContactManager.DataModal.dll
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataModal\bin\Debug\Sunwing.ContactManager.DataModal.pdb
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataModal\bin\Debug\EntityFramework.dll
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataModal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataModal\bin\Debug\EntityFramework.xml
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataModal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataModal\obj\Debug\Sunwing.ContactManager.DataModal.csprojAssemblyReference.cache
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataModal\obj\Debug\Sunwing.ContactManager.DataModal.csproj.CoreCompileInputs.cache
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataModal\obj\Debug\Sunwing.ContactManager.DataModal.csproj.CopyComplete
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataModal\obj\Debug\Sunwing.ContactManager.DataModal.dll
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.DataModal\obj\Debug\Sunwing.ContactManager.DataModal.pdb
