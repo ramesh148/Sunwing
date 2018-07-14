@@ -80,7 +80,6 @@ C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Unity.Container.dll
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Unity.Abstractions.dll
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Sunwing.ContactManager.Business.dll
-C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Sunwing.ContactManager.DataModal.dll
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Sunwing.ContactManager.DataAccess.dll
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\EntityFramework.dll
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
@@ -100,8 +99,6 @@ C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Unity.Container.pdb
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Unity.Abstractions.pdb
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Sunwing.ContactManager.Business.pdb
-C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Sunwing.ContactManager.DataModal.pdb
-C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Sunwing.ContactManager.DataModal.dll.config
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Sunwing.ContactManager.DataAccess.pdb
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Sunwing.ContactManager.DataAccess.dll.config
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\EntityFramework.xml
@@ -115,3 +112,6 @@ C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Sunwing.ContactManager.WebApi.dll
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Sunwing.ContactManager.WebApi.pdb
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Sunwing.ContactManager.WebApi.dll.config
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Sunwing.ContactManager.DataModel.dll
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Sunwing.ContactManager.DataModel.pdb
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi.Tests\bin\Debug\Sunwing.ContactManager.DataModel.dll.config

@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Sunwing.ContactManager.DataModal.Models;
+﻿using Sunwing.ContactManager.DataModel;
+using System;
 
 namespace Sunwing.ContactManager.DataAccess
 {
     public class UnitOfWork : IDisposable, IUnitOfWork
     {
-        private ContactManagerContext dbContext = new ContactManagerContext();
+        private ContactManagerEntities dbContext = new ContactManagerEntities();
         private ContactManagerRepository<Customer> customerRepository;
         private ContactManagerRepository<Supplier> supplierRepository;
 

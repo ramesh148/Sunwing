@@ -1,21 +1,17 @@
-﻿using System;
+﻿using Sunwing.ContactManager.DataModel;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Linq.Expressions;
 using System.Data.Entity;
-using Sunwing.ContactManager.DataModal.Models;
+using System.Linq;
 
 namespace Sunwing.ContactManager.DataAccess
 {
     public class ContactManagerRepository<TEntity> : IContactManagerRepository<TEntity>
     where TEntity : class
     {
-        internal ContactManagerContext dbContext;
+        internal ContactManagerEntities dbContext;
         internal DbSet<TEntity> dbSet;
 
-        public ContactManagerRepository(ContactManagerContext dbContext)
+        public ContactManagerRepository(ContactManagerEntities dbContext)
         {
             this.dbContext = dbContext;
             this.dbSet = dbContext.Set<TEntity>();

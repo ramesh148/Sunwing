@@ -1,9 +1,5 @@
-﻿using Sunwing.ContactManager.DataModal.Models;
-using System;
+﻿using Sunwing.ContactManager.DataModel;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sunwing.ContactManager.Business
 {

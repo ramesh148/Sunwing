@@ -10,10 +10,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sunwing.ContactManager.Business</RootNamespace>
     <AssemblyName>Sunwing.ContactManager.Business</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,9 +55,9 @@
       <Project>{422a2d09-bcb1-42d6-a1cc-17c31113046f}</Project>
       <Name>Sunwing.ContactManager.DataAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Sunwing.ContactManager.DataModal\Sunwing.ContactManager.DataModal.csproj">
-      <Project>{731c9a5f-837d-49a3-adbf-358f090872b0}</Project>
-      <Name>Sunwing.ContactManager.DataModal</Name>
+    <ProjectReference Include="..\Sunwing.ContactManager.DataModel\Sunwing.ContactManager.DataModel.csproj">
+      <Project>{d4db7283-0693-443f-a32f-a27a4d892e53}</Project>
+      <Name>Sunwing.ContactManager.DataModel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

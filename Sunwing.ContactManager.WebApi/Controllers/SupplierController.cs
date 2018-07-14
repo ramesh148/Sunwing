@@ -1,5 +1,5 @@
 ﻿using Sunwing.ContactManager.Business;
-using Sunwing.ContactManager.DataModal.Models;
+using Sunwing.ContactManager.DataModel;
 using Sunwing.ContactManager.WebApi.Filters;
 using System;
 using System.Collections.Generic;

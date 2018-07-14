@@ -1,6 +1,6 @@
 ﻿using Sunwing.ContactManager.Business;
 using Sunwing.ContactManager.DataAccess;
-using Sunwing.ContactManager.DataModal.Models;
+using Sunwing.ContactManager.DataModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;

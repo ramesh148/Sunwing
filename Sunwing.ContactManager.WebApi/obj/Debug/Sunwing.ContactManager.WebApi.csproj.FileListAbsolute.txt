@@ -123,7 +123,12 @@ C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContractManager.WebApi\obj\Debug
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContractManager.WebApi\obj\Debug\Sunwing.ContactManager.WebApi.csproj.CopyComplete
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContractManager.WebApi\obj\Debug\Sunwing.ContractManager.WebApi.dll
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContractManager.WebApi\obj\Debug\Sunwing.ContractManager.WebApi.pdb
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\obj\Debug\Sunwing.ContactManager.WebApi.csprojAssemblyReference.cache
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\obj\Debug\Sunwing.ContactManager.WebApi.csproj.CoreCompileInputs.cache
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\ApplicationInsights.config
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Sunwing.ContactManager.WebApi.dll.config
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Sunwing.ContactManager.WebApi.dll
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Sunwing.ContactManager.WebApi.pdb
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\roslyn\csc.exe
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\roslyn\csc.exe.config
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\roslyn\csc.rsp
@@ -185,9 +190,10 @@ C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Micros
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Microsoft.Web.Infrastructure.dll
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Newtonsoft.Json.dll
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\NLog.dll
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Sunwing.ContactManager.Business.dll
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Sunwing.ContactManager.DataAccess.dll
-C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Sunwing.ContactManager.DataModal.dll
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Sunwing.ContactManager.DataModel.dll
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\System.Diagnostics.DiagnosticSource.dll
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\System.Net.Http.Formatting.dll
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\System.Web.Cors.dll
@@ -212,8 +218,8 @@ C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\WebGre
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Sunwing.ContactManager.Business.pdb
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Sunwing.ContactManager.DataAccess.pdb
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Sunwing.ContactManager.DataAccess.dll.config
-C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Sunwing.ContactManager.DataModal.pdb
-C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Sunwing.ContactManager.DataModal.dll.config
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Sunwing.ContactManager.DataModel.pdb
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Sunwing.ContactManager.DataModel.dll.config
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\CommonServiceLocator.pdb
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\EntityFramework.xml
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\EntityFramework.SqlServer.xml
@@ -223,6 +229,7 @@ C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Micros
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Newtonsoft.Json.xml
+C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\NLog.xml
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\System.Net.Http.Formatting.xml
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\System.Web.Helpers.xml
@@ -243,13 +250,6 @@ C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Unity.
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Unity.RegistrationByConvention.pdb
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Unity.ServiceLocation.pdb
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Antlr3.Runtime.pdb
-C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\obj\Debug\Sunwing.ContactManager.WebApi.csprojAssemblyReference.cache
-C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\obj\Debug\Sunwing.ContactManager.WebApi.csproj.CoreCompileInputs.cache
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\obj\Debug\Sunwing.ContactManager.WebApi.csproj.CopyComplete
-C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\NLog.dll
-C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\NLog.xml
-C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Sunwing.ContactManager.WebApi.dll.config
-C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Sunwing.ContactManager.WebApi.dll
-C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\bin\Sunwing.ContactManager.WebApi.pdb
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\obj\Debug\Sunwing.ContactManager.WebApi.dll
 C:\Ramesh\Coding\Sunwing.ContactManager\Sunwing.ContactManager.WebApi\obj\Debug\Sunwing.ContactManager.WebApi.pdb
