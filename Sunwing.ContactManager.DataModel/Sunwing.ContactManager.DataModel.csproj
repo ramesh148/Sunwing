@@ -90,6 +90,24 @@
       <DependentUpon>ContactManager.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_GetAllCustomers_Result.cs">
+      <DependentUpon>ContactManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetAllSuppliers_Result.cs">
+      <DependentUpon>ContactManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetCustomer_Result.cs">
+      <DependentUpon>ContactManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetSupplier_Result.cs">
+      <DependentUpon>ContactManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_InsertCustomer_Result.cs">
+      <DependentUpon>ContactManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_InsertSupplier_Result.cs">
+      <DependentUpon>ContactManager.tt</DependentUpon>
+    </Compile>
     <Compile Include="Supplier.cs">
       <DependentUpon>ContactManager.tt</DependentUpon>
     </Compile>

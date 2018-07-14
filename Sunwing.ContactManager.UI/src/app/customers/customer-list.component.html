@@ -4,13 +4,15 @@
 
 <div class='panel-body'>
     <div class='table-responsive'>
-        <table class='table' *ngIf='customerList && customerList.length'>
-            <tr colsapn="3"><td>  <a (click)="ShowCustomerForm(customer)">Add New</a></td></tr>
+        <div><a (click)="ShowCustomerForm(customer)">Add New</a></div>
+        <table class='table' *ngIf='customerList && customerList.length'>        
             <thead>
                 <tr>
                     <th>Name</th>
                     <th>Brith Date</th>
                     <th>Email</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>

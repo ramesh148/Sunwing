@@ -47,8 +47,7 @@ namespace Sunwing.ContactManager.DataAccess
         {
             var entity = dbSet.Attach(entityToUpdate);
             dbContext.Entry(entityToUpdate).State = EntityState.Modified;
-
-            return entity;
+            return entityToUpdate;
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Sunwing.ContactManager.DataModel
         public string Email { get; set; }
         public bool IsActive { get; set; }
         public string CreatedBy { get; set; }
-        public System.DateTime CreatedDate { get; set; }
+        public Nullable<System.DateTime> CreatedDate { get; set; }
         public string ModifiedBy { get; set; }
         public Nullable<System.DateTime> ModifiedDate { get; set; }
     }

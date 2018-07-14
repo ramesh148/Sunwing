@@ -138,5 +138,113 @@ namespace Sunwing.ContactManager.DataModel
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<InsertSupplier_Result>("InsertSupplier", supplierIdParameter, firstNameParameter, lastNameParameter, telephoneParameter, createdByParameter);
         }
+    
+        public virtual int sp_DeleteCustomer(Nullable<int> customerId, string modifiedBy)
+        {
+            var customerIdParameter = customerId.HasValue ?
+                new ObjectParameter("CustomerId", customerId) :
+                new ObjectParameter("CustomerId", typeof(int));
+    
+            var modifiedByParameter = modifiedBy != null ?
+                new ObjectParameter("ModifiedBy", modifiedBy) :
+                new ObjectParameter("ModifiedBy", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_DeleteCustomer", customerIdParameter, modifiedByParameter);
+        }
+    
+        public virtual int sp_DeleteSupplier(Nullable<int> supplierId, string modifiedBy)
+        {
+            var supplierIdParameter = supplierId.HasValue ?
+                new ObjectParameter("SupplierId", supplierId) :
+                new ObjectParameter("SupplierId", typeof(int));
+    
+            var modifiedByParameter = modifiedBy != null ?
+                new ObjectParameter("ModifiedBy", modifiedBy) :
+                new ObjectParameter("ModifiedBy", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_DeleteSupplier", supplierIdParameter, modifiedByParameter);
+        }
+    
+        public virtual ObjectResult<sp_GetAllCustomers_Result> sp_GetAllCustomers()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_GetAllCustomers_Result>("sp_GetAllCustomers");
+        }
+    
+        public virtual ObjectResult<sp_GetAllSuppliers_Result> sp_GetAllSuppliers()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_GetAllSuppliers_Result>("sp_GetAllSuppliers");
+        }
+    
+        public virtual ObjectResult<sp_GetCustomer_Result> sp_GetCustomer(Nullable<int> customerId)
+        {
+            var customerIdParameter = customerId.HasValue ?
+                new ObjectParameter("CustomerId", customerId) :
+                new ObjectParameter("CustomerId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_GetCustomer_Result>("sp_GetCustomer", customerIdParameter);
+        }
+    
+        public virtual ObjectResult<sp_GetSupplier_Result> sp_GetSupplier(Nullable<int> supplierId)
+        {
+            var supplierIdParameter = supplierId.HasValue ?
+                new ObjectParameter("SupplierId", supplierId) :
+                new ObjectParameter("SupplierId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_GetSupplier_Result>("sp_GetSupplier", supplierIdParameter);
+        }
+    
+        public virtual ObjectResult<sp_InsertCustomer_Result> sp_InsertCustomer(Nullable<int> customerId, string firstName, string lastName, Nullable<System.DateTime> birthDay, string email, string createdBy)
+        {
+            var customerIdParameter = customerId.HasValue ?
+                new ObjectParameter("CustomerId", customerId) :
+                new ObjectParameter("CustomerId", typeof(int));
+    
+            var firstNameParameter = firstName != null ?
+                new ObjectParameter("FirstName", firstName) :
+                new ObjectParameter("FirstName", typeof(string));
+    
+            var lastNameParameter = lastName != null ?
+                new ObjectParameter("LastName", lastName) :
+                new ObjectParameter("LastName", typeof(string));
+    
+            var birthDayParameter = birthDay.HasValue ?
+                new ObjectParameter("BirthDay", birthDay) :
+                new ObjectParameter("BirthDay", typeof(System.DateTime));
+    
+            var emailParameter = email != null ?
+                new ObjectParameter("Email", email) :
+                new ObjectParameter("Email", typeof(string));
+    
+            var createdByParameter = createdBy != null ?
+                new ObjectParameter("CreatedBy", createdBy) :
+                new ObjectParameter("CreatedBy", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_InsertCustomer_Result>("sp_InsertCustomer", customerIdParameter, firstNameParameter, lastNameParameter, birthDayParameter, emailParameter, createdByParameter);
+        }
+    
+        public virtual ObjectResult<sp_InsertSupplier_Result> sp_InsertSupplier(Nullable<int> supplierId, string firstName, string lastName, string telephone, string createdBy)
+        {
+            var supplierIdParameter = supplierId.HasValue ?
+                new ObjectParameter("SupplierId", supplierId) :
+                new ObjectParameter("SupplierId", typeof(int));
+    
+            var firstNameParameter = firstName != null ?
+                new ObjectParameter("FirstName", firstName) :
+                new ObjectParameter("FirstName", typeof(string));
+    
+            var lastNameParameter = lastName != null ?
+                new ObjectParameter("LastName", lastName) :
+                new ObjectParameter("LastName", typeof(string));
+    
+            var telephoneParameter = telephone != null ?
+                new ObjectParameter("Telephone", telephone) :
+                new ObjectParameter("Telephone", typeof(string));
+    
+            var createdByParameter = createdBy != null ?
+                new ObjectParameter("CreatedBy", createdBy) :
+                new ObjectParameter("CreatedBy", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_InsertSupplier_Result>("sp_InsertSupplier", supplierIdParameter, firstNameParameter, lastNameParameter, telephoneParameter, createdByParameter);
+        }
     }
 }

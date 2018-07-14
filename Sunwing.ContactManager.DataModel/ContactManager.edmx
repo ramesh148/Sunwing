@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ContactManagerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ContactManagerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="__RefactorLog">
           <Key>
             <PropertyRef Name="OperationKey" />
@@ -21,8 +21,8 @@
           <Property Name="BirthDay" Type="datetime2" Precision="7" />
           <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
-          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="CreatedDate" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime2" Precision="7" />
           <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
           <Property Name="ModifiedDate" Type="datetime2" Precision="7" />
         </EntityType>
@@ -35,28 +35,28 @@
           <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Telephone" Type="nvarchar" MaxLength="12" Nullable="false" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
-          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="CreatedDate" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime2" Precision="7" />
           <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
           <Property Name="ModifiedDate" Type="datetime2" Precision="7" />
         </EntityType>
-        <Function Name="DeleteCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="sp_DeleteCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="CustomerId" Type="int" Mode="In" />
           <Parameter Name="ModifiedBy" Type="varchar" Mode="In" />
         </Function>
-        <Function Name="DeleteSupplier" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="sp_DeleteSupplier" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="SupplierId" Type="int" Mode="In" />
           <Parameter Name="ModifiedBy" Type="varchar" Mode="In" />
         </Function>
-        <Function Name="GetAllCustomers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="GetAllSuppliers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="GetCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="sp_GetAllCustomers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_GetAllSuppliers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_GetCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="CustomerId" Type="int" Mode="In" />
         </Function>
-        <Function Name="GetSupplier" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="sp_GetSupplier" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="SupplierId" Type="int" Mode="In" />
         </Function>
-        <Function Name="InsertCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="sp_InsertCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="CustomerId" Type="int" Mode="In" />
           <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
           <Parameter Name="LastName" Type="nvarchar" Mode="In" />
@@ -64,7 +64,7 @@
           <Parameter Name="Email" Type="nvarchar" Mode="In" />
           <Parameter Name="CreatedBy" Type="nvarchar" Mode="In" />
         </Function>
-        <Function Name="InsertSupplier" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="sp_InsertSupplier" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="SupplierId" Type="int" Mode="In" />
           <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
           <Parameter Name="LastName" Type="nvarchar" Mode="In" />
@@ -76,8 +76,7 @@
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ContactManagerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -97,8 +96,8 @@
           <Property Name="BirthDay" Type="DateTime" Precision="7" />
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
-          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="7" />
           <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ModifiedDate" Type="DateTime" Precision="7" />
         </EntityType>
@@ -111,8 +110,8 @@
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Telephone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
-          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="7" />
           <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ModifiedDate" Type="DateTime" Precision="7" />
         </EntityType>
@@ -151,6 +150,37 @@
             <Parameter Name="Telephone" Mode="In" Type="String" />
             <Parameter Name="CreatedBy" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="sp_DeleteCustomer">
+            <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+            <Parameter Name="ModifiedBy" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_DeleteSupplier">
+            <Parameter Name="SupplierId" Mode="In" Type="Int32" />
+            <Parameter Name="ModifiedBy" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GetAllCustomers" ReturnType="Collection(ContactManagerModel.sp_GetAllCustomers_Result)" />
+          <FunctionImport Name="sp_GetAllSuppliers" ReturnType="Collection(ContactManagerModel.sp_GetAllSuppliers_Result)" />
+          <FunctionImport Name="sp_GetCustomer" ReturnType="Collection(ContactManagerModel.sp_GetCustomer_Result)">
+          <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GetSupplier" ReturnType="Collection(ContactManagerModel.sp_GetSupplier_Result)">
+          <Parameter Name="SupplierId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_InsertCustomer" ReturnType="Collection(ContactManagerModel.sp_InsertCustomer_Result)">
+            <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+            <Parameter Name="FirstName" Mode="In" Type="String" />
+            <Parameter Name="LastName" Mode="In" Type="String" />
+            <Parameter Name="BirthDay" Mode="In" Type="DateTime" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="CreatedBy" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_InsertSupplier" ReturnType="Collection(ContactManagerModel.sp_InsertSupplier_Result)">
+            <Parameter Name="SupplierId" Mode="In" Type="Int32" />
+            <Parameter Name="FirstName" Mode="In" Type="String" />
+            <Parameter Name="LastName" Mode="In" Type="String" />
+            <Parameter Name="Telephone" Mode="In" Type="String" />
+            <Parameter Name="CreatedBy" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="GetAllCustomers_Result">
           <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
@@ -182,6 +212,41 @@
           <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
         </ComplexType>
         <ComplexType Name="InsertSupplier_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Telephone" Nullable="false" MaxLength="12" />
+        </ComplexType>
+        <ComplexType Name="sp_GetAllCustomers_Result">
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="BirthDay" Nullable="true" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_GetAllSuppliers_Result">
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Telephone" Nullable="false" MaxLength="12" />
+        </ComplexType>
+        <ComplexType Name="sp_GetCustomer_Result">
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="BirthDay" Nullable="true" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_GetSupplier_Result">
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Telephone" Nullable="false" MaxLength="12" />
+        </ComplexType>
+        <ComplexType Name="sp_InsertCustomer_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="BirthDay" Nullable="true" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_InsertSupplier_Result">
           <Property Type="Int32" Name="Id" Nullable="false" />
           <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
@@ -231,11 +296,11 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="DeleteCustomer" FunctionName="ContactManagerModel.Store.DeleteCustomer" />
-          <FunctionImportMapping FunctionImportName="DeleteSupplier" FunctionName="ContactManagerModel.Store.DeleteSupplier" />
-          <FunctionImportMapping FunctionImportName="GetAllCustomers" FunctionName="ContactManagerModel.Store.GetAllCustomers">
+          <FunctionImportMapping FunctionImportName="sp_DeleteCustomer" FunctionName="ContactManagerModel.Store.sp_DeleteCustomer" />
+          <FunctionImportMapping FunctionImportName="sp_DeleteSupplier" FunctionName="ContactManagerModel.Store.sp_DeleteSupplier" />
+          <FunctionImportMapping FunctionImportName="sp_GetAllCustomers" FunctionName="ContactManagerModel.Store.sp_GetAllCustomers">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="ContactManagerModel.GetAllCustomers_Result">
+              <ComplexTypeMapping TypeName="ContactManagerModel.sp_GetAllCustomers_Result">
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
@@ -243,18 +308,18 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="GetAllSuppliers" FunctionName="ContactManagerModel.Store.GetAllSuppliers">
+          <FunctionImportMapping FunctionImportName="sp_GetAllSuppliers" FunctionName="ContactManagerModel.Store.sp_GetAllSuppliers">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="ContactManagerModel.GetAllSuppliers_Result">
+              <ComplexTypeMapping TypeName="ContactManagerModel.sp_GetAllSuppliers_Result">
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="Telephone" ColumnName="Telephone" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="GetCustomer" FunctionName="ContactManagerModel.Store.GetCustomer">
+          <FunctionImportMapping FunctionImportName="sp_GetCustomer" FunctionName="ContactManagerModel.Store.sp_GetCustomer">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="ContactManagerModel.GetCustomer_Result">
+              <ComplexTypeMapping TypeName="ContactManagerModel.sp_GetCustomer_Result">
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
@@ -262,18 +327,18 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="GetSupplier" FunctionName="ContactManagerModel.Store.GetSupplier">
+          <FunctionImportMapping FunctionImportName="sp_GetSupplier" FunctionName="ContactManagerModel.Store.sp_GetSupplier">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="ContactManagerModel.GetSupplier_Result">
+              <ComplexTypeMapping TypeName="ContactManagerModel.sp_GetSupplier_Result">
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="Telephone" ColumnName="Telephone" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="InsertCustomer" FunctionName="ContactManagerModel.Store.InsertCustomer">
+          <FunctionImportMapping FunctionImportName="sp_InsertCustomer" FunctionName="ContactManagerModel.Store.sp_InsertCustomer">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="ContactManagerModel.InsertCustomer_Result">
+              <ComplexTypeMapping TypeName="ContactManagerModel.sp_InsertCustomer_Result">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -282,9 +347,9 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="InsertSupplier" FunctionName="ContactManagerModel.Store.InsertSupplier">
+          <FunctionImportMapping FunctionImportName="sp_InsertSupplier" FunctionName="ContactManagerModel.Store.sp_InsertSupplier">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="ContactManagerModel.InsertSupplier_Result">
+              <ComplexTypeMapping TypeName="ContactManagerModel.sp_InsertSupplier_Result">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -292,7 +357,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-        </EntityContainerMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

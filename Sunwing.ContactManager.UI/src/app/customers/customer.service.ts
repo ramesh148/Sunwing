@@ -36,7 +36,7 @@ export class CustomerService {
         const params = new HttpParams().set('Id', customer.Id.toString());
         const headers = new HttpHeaders().set('content-type', 'application/json');
         var body = {
-            FirstName: customer.FirstName, LastName: customer.LastName, BirthDay: customer.BirthDay, Email: customer.Email,
+            Id:customer.Id, FirstName: customer.FirstName, LastName: customer.LastName, BirthDay: customer.BirthDay, Email: customer.Email,
 
         }
         return this._httpClient.put<ICustomer>(this._customerUrl , body, { headers, params })
@@ -46,7 +46,7 @@ export class CustomerService {
         const params = new HttpParams().set('Id', customer.Id.toString());
         const headers = new HttpHeaders().set('content-type', 'application/json');
         var body = {
-            FirstName: customer.FirstName, LastName: customer.LastName, BirthDay: customer.BirthDay, Email: customer.Email,
+            Id:customer.Id, FirstName: customer.FirstName, LastName: customer.LastName, BirthDay: customer.BirthDay, Email: customer.Email,
         }
         return this._httpClient.delete<ICustomer>(this._customerUrl + "/delete?Id=" + customer.Id);
     }

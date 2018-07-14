@@ -39,11 +39,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="DeleteCustomer" FunctionName="ContactManagerModel.Store.DeleteCustomer" />
-    <FunctionImportMapping FunctionImportName="DeleteSupplier" FunctionName="ContactManagerModel.Store.DeleteSupplier" />
-    <FunctionImportMapping FunctionImportName="GetAllCustomers" FunctionName="ContactManagerModel.Store.GetAllCustomers">
+    <FunctionImportMapping FunctionImportName="sp_DeleteCustomer" FunctionName="ContactManagerModel.Store.sp_DeleteCustomer" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteSupplier" FunctionName="ContactManagerModel.Store.sp_DeleteSupplier" />
+    <FunctionImportMapping FunctionImportName="sp_GetAllCustomers" FunctionName="ContactManagerModel.Store.sp_GetAllCustomers">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="ContactManagerModel.GetAllCustomers_Result">
+        <ComplexTypeMapping TypeName="ContactManagerModel.sp_GetAllCustomers_Result">
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
@@ -51,18 +51,18 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="GetAllSuppliers" FunctionName="ContactManagerModel.Store.GetAllSuppliers">
+    <FunctionImportMapping FunctionImportName="sp_GetAllSuppliers" FunctionName="ContactManagerModel.Store.sp_GetAllSuppliers">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="ContactManagerModel.GetAllSuppliers_Result">
+        <ComplexTypeMapping TypeName="ContactManagerModel.sp_GetAllSuppliers_Result">
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="Telephone" ColumnName="Telephone" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="GetCustomer" FunctionName="ContactManagerModel.Store.GetCustomer">
+    <FunctionImportMapping FunctionImportName="sp_GetCustomer" FunctionName="ContactManagerModel.Store.sp_GetCustomer">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="ContactManagerModel.GetCustomer_Result">
+        <ComplexTypeMapping TypeName="ContactManagerModel.sp_GetCustomer_Result">
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
@@ -70,18 +70,18 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="GetSupplier" FunctionName="ContactManagerModel.Store.GetSupplier">
+    <FunctionImportMapping FunctionImportName="sp_GetSupplier" FunctionName="ContactManagerModel.Store.sp_GetSupplier">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="ContactManagerModel.GetSupplier_Result">
+        <ComplexTypeMapping TypeName="ContactManagerModel.sp_GetSupplier_Result">
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="Telephone" ColumnName="Telephone" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="InsertCustomer" FunctionName="ContactManagerModel.Store.InsertCustomer">
+    <FunctionImportMapping FunctionImportName="sp_InsertCustomer" FunctionName="ContactManagerModel.Store.sp_InsertCustomer">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="ContactManagerModel.InsertCustomer_Result">
+        <ComplexTypeMapping TypeName="ContactManagerModel.sp_InsertCustomer_Result">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -90,9 +90,9 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="InsertSupplier" FunctionName="ContactManagerModel.Store.InsertSupplier">
+    <FunctionImportMapping FunctionImportName="sp_InsertSupplier" FunctionName="ContactManagerModel.Store.sp_InsertSupplier">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="ContactManagerModel.InsertSupplier_Result">
+        <ComplexTypeMapping TypeName="ContactManagerModel.sp_InsertSupplier_Result">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />

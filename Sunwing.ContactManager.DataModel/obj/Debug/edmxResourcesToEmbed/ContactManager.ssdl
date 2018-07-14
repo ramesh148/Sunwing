@@ -16,8 +16,8 @@
     <Property Name="BirthDay" Type="datetime2" Precision="7" />
     <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="IsActive" Type="bit" Nullable="false" />
-    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="CreatedDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime2" Precision="7" />
     <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
     <Property Name="ModifiedDate" Type="datetime2" Precision="7" />
   </EntityType>
@@ -30,28 +30,28 @@
     <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Telephone" Type="nvarchar" MaxLength="12" Nullable="false" />
     <Property Name="IsActive" Type="bit" Nullable="false" />
-    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="CreatedDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime2" Precision="7" />
     <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
     <Property Name="ModifiedDate" Type="datetime2" Precision="7" />
   </EntityType>
-  <Function Name="DeleteCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+  <Function Name="sp_DeleteCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="CustomerId" Type="int" Mode="In" />
     <Parameter Name="ModifiedBy" Type="varchar" Mode="In" />
   </Function>
-  <Function Name="DeleteSupplier" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+  <Function Name="sp_DeleteSupplier" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="SupplierId" Type="int" Mode="In" />
     <Parameter Name="ModifiedBy" Type="varchar" Mode="In" />
   </Function>
-  <Function Name="GetAllCustomers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-  <Function Name="GetAllSuppliers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-  <Function Name="GetCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+  <Function Name="sp_GetAllCustomers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_GetAllSuppliers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_GetCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="CustomerId" Type="int" Mode="In" />
   </Function>
-  <Function Name="GetSupplier" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+  <Function Name="sp_GetSupplier" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="SupplierId" Type="int" Mode="In" />
   </Function>
-  <Function Name="InsertCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+  <Function Name="sp_InsertCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="CustomerId" Type="int" Mode="In" />
     <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
     <Parameter Name="LastName" Type="nvarchar" Mode="In" />
@@ -59,7 +59,7 @@
     <Parameter Name="Email" Type="nvarchar" Mode="In" />
     <Parameter Name="CreatedBy" Type="nvarchar" Mode="In" />
   </Function>
-  <Function Name="InsertSupplier" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+  <Function Name="sp_InsertSupplier" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="SupplierId" Type="int" Mode="In" />
     <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
     <Parameter Name="LastName" Type="nvarchar" Mode="In" />

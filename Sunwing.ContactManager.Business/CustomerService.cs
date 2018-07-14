@@ -25,24 +25,30 @@ namespace Sunwing.ContactManager.Business
 
         public Customer Create(Customer customer)
         {
-            return unitOfWork.CustomerRepository.Insert(customer);
+            var newCustomer = unitOfWork.CustomerRepository.Insert(customer);
+            unitOfWork.Save();
+            return newCustomer;
         }
 
         public void Delete(Customer customer)
         {
             customer.IsActive = false;
             unitOfWork.CustomerRepository.Delete(customer);
+            unitOfWork.Save();
         }
 
         public void Delete(int Id)
         {
            var customer = unitOfWork.CustomerRepository.GetById(Id);            
             unitOfWork.CustomerRepository.Delete(customer);
+            unitOfWork.Save();
         }        
 
         public Customer Update(Customer customer)
         {
-            return unitOfWork.CustomerRepository.Update(customer);
+            var newCustomer = unitOfWork.CustomerRepository.Update(customer);
+            unitOfWork.Save();
+            return newCustomer;
         }
     }
 }

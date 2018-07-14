@@ -16,8 +16,8 @@
     <Property Name="BirthDay" Type="DateTime" Precision="7" />
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
-    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="7" />
     <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="ModifiedDate" Type="DateTime" Precision="7" />
   </EntityType>
@@ -30,8 +30,8 @@
     <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Telephone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
-    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="7" />
     <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="ModifiedDate" Type="DateTime" Precision="7" />
   </EntityType>
@@ -70,6 +70,37 @@
       <Parameter Name="Telephone" Mode="In" Type="String" />
       <Parameter Name="CreatedBy" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="sp_DeleteCustomer">
+      <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+      <Parameter Name="ModifiedBy" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DeleteSupplier">
+      <Parameter Name="SupplierId" Mode="In" Type="Int32" />
+      <Parameter Name="ModifiedBy" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetAllCustomers" ReturnType="Collection(ContactManagerModel.sp_GetAllCustomers_Result)" />
+    <FunctionImport Name="sp_GetAllSuppliers" ReturnType="Collection(ContactManagerModel.sp_GetAllSuppliers_Result)" />
+    <FunctionImport Name="sp_GetCustomer" ReturnType="Collection(ContactManagerModel.sp_GetCustomer_Result)">
+      <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetSupplier" ReturnType="Collection(ContactManagerModel.sp_GetSupplier_Result)">
+      <Parameter Name="SupplierId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_InsertCustomer" ReturnType="Collection(ContactManagerModel.sp_InsertCustomer_Result)">
+      <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+      <Parameter Name="FirstName" Mode="In" Type="String" />
+      <Parameter Name="LastName" Mode="In" Type="String" />
+      <Parameter Name="BirthDay" Mode="In" Type="DateTime" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="CreatedBy" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_InsertSupplier" ReturnType="Collection(ContactManagerModel.sp_InsertSupplier_Result)">
+      <Parameter Name="SupplierId" Mode="In" Type="Int32" />
+      <Parameter Name="FirstName" Mode="In" Type="String" />
+      <Parameter Name="LastName" Mode="In" Type="String" />
+      <Parameter Name="Telephone" Mode="In" Type="String" />
+      <Parameter Name="CreatedBy" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="GetAllCustomers_Result">
     <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
@@ -101,6 +132,41 @@
     <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
   </ComplexType>
   <ComplexType Name="InsertSupplier_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Telephone" Nullable="false" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="sp_GetAllCustomers_Result">
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="BirthDay" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_GetAllSuppliers_Result">
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Telephone" Nullable="false" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="sp_GetCustomer_Result">
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="BirthDay" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_GetSupplier_Result">
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Telephone" Nullable="false" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="sp_InsertCustomer_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="BirthDay" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_InsertSupplier_Result">
     <Property Type="Int32" Name="Id" Nullable="false" />
     <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
     <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
