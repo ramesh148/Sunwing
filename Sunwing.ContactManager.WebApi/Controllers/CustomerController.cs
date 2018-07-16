@@ -1,14 +1,10 @@
 ﻿using Sunwing.ContactManager.Business;
-using Sunwing.ContactManager.DataAccess;
 using Sunwing.ContactManager.DataModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Filters;
 using Sunwing.ContactManager.WebApi.Filters;
+using System.Net.Http;
 
 namespace Sunwing.ContactManager.WebApi.Controllers
 {
@@ -24,14 +20,14 @@ namespace Sunwing.ContactManager.WebApi.Controllers
         }
 
         [HttpPost]        
-        public IHttpActionResult Post(Customer customer)
+        public IHttpActionResult PostCustomer(Customer customer)
         {
             var newCustomer = customerService.Create(customer);
             return Ok(customer);
         }
-
+        
         [HttpGet]
-        public IHttpActionResult GetAll ()
+        public IHttpActionResult GetCustomers ()
         {
             var customers = customerService.Get();
             if (customers == null)
@@ -48,40 +44,38 @@ namespace Sunwing.ContactManager.WebApi.Controllers
             return Ok(customers);
         }
 
-        //[HttpGet]
-        //public IHttpActionResult Get(int Id)
-        //{
-        //    var customer = customerService.GetById(Id);
-        //    if (customer == null)
-        //    {
-        //        var resp = new HttpResponseMessage(HttpStatusCode.NotFound)
-        //        {
-        //            Content = new StringContent(string.Format("No customer available with Id = {0}", Id)),
-        //            ReasonPhrase = "Customer not found."
-        //        };
-
-        //        throw new HttpResponseException(resp);
-        //    }
-
-        //    return Ok(customer);
-        //}
+        [HttpGet]
+        public IHttpActionResult GetCustomer(int Id)
+        {
+            var customer = customerService.GetById(Id);
+            if (customer == null)
+            {
+                var resp = new HttpResponseMessage(HttpStatusCode.NotFound)
+                {
+                    Content = new StringContent(string.Format("No customer available with Id = {0}", Id)),
+                    ReasonPhrase = "Customer not found."
+                };
+                throw new HttpResponseException(resp);
+            }
+            return Ok(customer);
+        }
 
         [HttpPut]
-        public IHttpActionResult Put(Customer customer)
+        public IHttpActionResult PutCustomer(Customer customer)
         {
             var newCustomer = customerService.Update(customer);
             return Ok(newCustomer);
         }
 
         [HttpDelete]
-        public IHttpActionResult Delete(int Id)
+        public IHttpActionResult DeleteCustomer(int Id)
         {
             customerService.Delete(Id);
             return Ok("Success");
         }
 
         [HttpDelete]
-        public IHttpActionResult Delete(Customer customer)
+        public IHttpActionResult DeleteCustomer(Customer customer)
         {
             customerService.Delete(customer);
             return Ok();

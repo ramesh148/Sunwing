@@ -1,0 +1,110 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>{{ pageTitle }}</div>
+
+    <div class='panel-body'>
+        <div class='table-responsive'>
+            <div>
+                <a (click)="ShowCustomerForm(customer)">Add New</a>
+            </div>
+            <table class='table' *ngIf='customers && customers.length'>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Brith Date</th>
+                        <th>Email</th>
+                        <th>Last Name</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let customer of customer'>
+                        <td>
+                            <a [routerLink]="['/customers', customer.Id]">{{ customer.FirstName }}</a>
+                        </td>
+                        <td>{{customer.LastName}}</td>
+                        <td>{{customer.BirthDay}}</td>
+                        <td>{{customer.Email }}</td>
+                        <td>
+                            <a (click)="ShowCustomerForm(customer)">Edit</a>
+                        </td>
+                        <td>
+                            <a (click)="ShowCustomerFormForDelete(customer)">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr>
+            <form class="form-horizontal" #customerForm="ngForm" novalidate>
+                    <div class="container" *ngIf="editCustomer">
+                <fieldset> 
+                    <div class="form-group" [ngClass]="{'has-error': (FirstNameVar.touched || FirstNameVar.dirty) && !FirstNameVar.valid }">
+                        <label class="col-md-2 control-label" for="FirstNameId">First Name</label>
+
+                        <div class="col-md-8">
+                            <input class="form-control" id="FirstNameId" type="text" placeholder="First Name (required)" required minlength="3" [(ngModel)]=customer.FirstName
+                                name="FirstName" #FirstNameVar="ngModel" />
+                            <span class="help-block" *ngIf="(FirstNameVar.touched || FirstNameVar.dirty) && FirstNameVar.errors">
+                                <span *ngIf="FirstNameVar.errors.required">
+                                    Please enter your first name.
+                                </span>
+                                <span *ngIf="FirstNameVar.errors.minlength">
+                                    The first name must be longer than 3 characters.
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group" [ngClass]="{'has-error': (LastNameVar.touched || LastNameVar.dirty) && !LastNameVar.valid }">
+                        <label class="col-md-2 control-label" for="LastNameVarId">Last Name</label>
+
+                        <div class="col-md-8">
+                            <input class="form-control" id="LastNameId" type="text" placeholder="Last Name (required)" required minlength="3" [(ngModel)]=customer.LastName
+                                name="LastName" #FirstNameVar="ngModel" />
+                            <span class="help-block" *ngIf="(LastNameVar.touched || LastNameVar.dirty) && LastNameVar.errors">
+                                <span *ngIf="LastNameVar.errors.required">
+                                    Please enter your last name.
+                                </span>
+                                <span *ngIf="LastNameVar.errors.minlength">
+                                    The last name must be longer than 3 characters.
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group" [ngClass]="{'has-error': (BrithDayVar.touched || BrithDayVar.dirty) && !BrithDayVar.valid }">
+                        <label class="col-md-2 control-label" for="BrithDayId">Brith Day</label>
+
+                        <div class="col-md-8">
+                            <input class="form-control" id="BrithDayId" type="text" placeholder="Brith Day" [(ngModel)]=customer.BirthDay name="BrithDay"
+                                #BrithDayVar="ngModel" />
+                        </div>
+                    </div>
+                    <div class="form-group" [ngClass]="{'has-error': (EmailVar.touched || EmailVar.dirty) && !EmailVar.valid }">
+                        <label class="col-md-2 control-label" for="EmailId">Email</label>
+
+                        <div class="col-md-8">
+                            <input class="form-control" id="EmailId" type="text" placeholder="Email (required)" required minlength="3" [(ngModel)]=customer.Email
+                                name="Email" #FirstNameVar="ngModel" />
+                            <span class="help-block" *ngIf="(EmailVar.touched || EmailVar.dirty) && EmailVar.errors">
+                                <span *ngIf="EmailVar.errors.required">
+                                    Please enter your email.
+                                </span>
+                                <span *ngIf="EmailVar.errors.minlength">
+                                    The email must be longer than 3 characters.
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="from-group">
+                        <div class="col-md-4 col-md-offset-2">
+                            <span>
+                                <button class="btn btn-primary" value="Save" [disabled]="!customerForm.valid" (click)="Save(customerForm)">Save</button>
+                            </span>
+                        </div>
+                    </div>
+                </fieldset>
+                </div>
+            </form>
+        </div>
+    </div>

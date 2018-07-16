@@ -1,4 +1,5 @@
 import { Component, OnInit }  from '@angular/core';
+
 import { ICustomer } from './customer';
 import { CustomerService } from './customer.service';
 
@@ -7,12 +8,16 @@ import { CustomerService } from './customer.service';
     styleUrls: ['./customer-list.component.css']
 })
 export class CustomerListComponent implements OnInit {
-    pageTitle: string = 'Customer List';    
-    errorMessage: string;
-    customers: ICustomer[];
-    constructor(private customerService: CustomerService) {
-    }   
+    pageTitle: string = 'Customer List';
     
+    errorMessage: string;
+
+   customers: ICustomer[];
+
+    constructor(private customerService: CustomerService) {
+
+    }    
+
     ngOnInit(): void {
         this.customerService.getCustomers()
                 .subscribe(customers => this.customers = customers,

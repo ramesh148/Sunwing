@@ -30,12 +30,12 @@ namespace Sunwing.ContactManager.DataAccess
         public virtual void Delete(object Id)
         {
             TEntity entityToDelete = dbSet.Find(Id);
-            Update(entityToDelete);  //soft delete, set IsActive = 0
+            dbContext.Entry(entityToDelete).State = EntityState.Deleted;
         }
 
         public virtual void Delete(TEntity entityToDelete)
         {
-            Update(entityToDelete); //soft delete, set IsActive = 0
+            dbContext.Entry(entityToDelete).State = EntityState.Deleted;
         }        
 
         public virtual TEntity Insert(TEntity entity)

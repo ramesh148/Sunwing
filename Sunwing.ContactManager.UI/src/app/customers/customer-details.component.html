@@ -1,10 +1,38 @@
-<div class='panel panel-primary' *ngIf='customer'>
-  <div class='panel-heading'>
-    {{ pageTitle + ' : ' + customer.FirsttName}}
-  </div>
-  <div class='panel-footer'>
-    <a class='btn btn-default' (click)='onBack()' style='width:80px'>
-      <i class='glyphicon glyphicon-chevron-left'>Back</i>
-    </a>
-  </div>
+<div class="panel panel-primary" *ngIf="product">
+    <div class="panel-heading" style="font-size:large">
+        {{pageTitle + ": " + customer.fristName}}
+    </div>
+
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3"> First Name:</div>
+                    <div class="col-md-6">{{customer.fristName}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">Last Name</div>
+                    <div class="col-md-6">{{customer.lastName}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">Birth Day</div>
+                    <div class="col-md-6">{{customer.birthDay}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">Email</div>
+                    <div class="col-md-6">{{customer.email}}</div>
+                </div>
+            </div>
+        </div>
+        <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+    </div>
+    <div class="panel-footer">
+        <a class="btn btn-default" (click)="onBack()" style="width:80px">
+            <i class="glyphicon glyphicon-chevron-left"></i> Back
+        </a>
+        <a class="btn btn-primary" style="width:80px;margin-left:10px" 
+           [routerLink]="['/customerEdit', customer.id]">
+            Edit
+        </a>
+    </div>
 </div>

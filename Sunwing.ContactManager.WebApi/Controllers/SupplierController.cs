@@ -1,9 +1,6 @@
 ﻿using Sunwing.ContactManager.Business;
 using Sunwing.ContactManager.DataModel;
 using Sunwing.ContactManager.WebApi.Filters;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
@@ -23,14 +20,14 @@ namespace Sunwing.ContactManager.WebApi.Controllers
         }
 
         [HttpPost]
-        public IHttpActionResult Post(Supplier Supplier)
+        public IHttpActionResult PostSupplier(Supplier Supplier)
         {
             var newSupplier = SupplierService.Create(Supplier);
             return Ok(Supplier);
         }
 
         [HttpGet]
-        public IHttpActionResult GetAll()
+        public IHttpActionResult GetSuppliers()
         {
             var Suppliers = SupplierService.Get();
             if (Suppliers == null)
@@ -47,40 +44,40 @@ namespace Sunwing.ContactManager.WebApi.Controllers
             return Ok(Suppliers);
         }
 
-        //[HttpGet]
-        //public IHttpActionResult Get(int Id)
-        //{
-        //    var Supplier = SupplierService.GetById(Id);
-        //    if (Supplier == null)
-        //    {
-        //        var resp = new HttpResponseMessage(HttpStatusCode.NotFound)
-        //        {
-        //            Content = new StringContent(string.Format("No Supplier available with Id = {0}", Id)),
-        //            ReasonPhrase = "Supplier not found."
-        //        };
+        [HttpGet]
+        public IHttpActionResult GetSupplier(int Id)
+        {
+            var Supplier = SupplierService.GetById(Id);
+            if (Supplier == null)
+            {
+                var resp = new HttpResponseMessage(HttpStatusCode.NotFound)
+                {
+                    Content = new StringContent(string.Format("No Supplier available with Id = {0}", Id)),
+                    ReasonPhrase = "Supplier not found."
+                };
 
-        //        throw new HttpResponseException(resp);
-        //    }
+                throw new HttpResponseException(resp);
+            }
 
-        //    return Ok(Supplier);
-        //}
+            return Ok(Supplier);
+        }
 
         [HttpPut]
-        public IHttpActionResult Put(Supplier Supplier)
+        public IHttpActionResult PutSupplier(Supplier Supplier)
         {
             var newSupplier = SupplierService.Update(Supplier);
             return Ok(newSupplier);
         }
 
         [HttpDelete]
-        public IHttpActionResult Delete(int Id)
+        public IHttpActionResult DeleteSupplier(int Id)
         {
             SupplierService.Delete(Id);
             return Ok();
         }
 
         [HttpDelete]
-        public IHttpActionResult Delete(Supplier Supplier)
+        public IHttpActionResult DeleteSupplier(Supplier Supplier)
         {
             SupplierService.Delete(Supplier);
             return Ok();

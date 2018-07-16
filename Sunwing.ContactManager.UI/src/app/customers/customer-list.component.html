@@ -1,75 +1,43 @@
 <div class='panel panel-primary'>
-    <div class='panel-heading'>{{ pageTitle }}</div>
-</div>
+    <div class='panel-heading'>
+        {{pageTitle}}
+    </div>
+    
+    <div class='panel-body'>
 
-<div class='panel-body'>
-    <div class='table-responsive'>
-        <div><a (click)="ShowCustomerForm(customer)">Add New</a></div>
-        <table class='table' *ngIf='customerList && customerList.length'>        
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Brith Date</th>
-                    <th>Email</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor='let customer of customerList'>
-                    <td>
-                        <a [routerLink]="['/customers', customer.Id]">{{ customer.FirstName }}</a>
-                    </td>
-                    <td>{{customer.BirthDay}}</td>
-                    <td>{{customer.Email }}</td>
-                    <td>
-                        <a (click)="ShowCustomerForm(customer)">Edit</a>
-                    </td>
-                    <td>
-                        <a (click)="ShowCustomerFormForDelete(customer)">Delete</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+
+        <div class='table-responsive'>
+            <table class='table'
+                   *ngIf='customers && customers.length'>
+                <thead>
+                    <tr>                        
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Birth Day</th>
+                        <th>Email</th>                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let customer of customers'>
+                        
+                        <td><a [routerLink]="['/customer', customer.Id]">
+                            {{customer.FirstName}}
+                            </a>
+                        </td>
+                        <td>{{ customer.LastName }}</td>
+                        <td>{{ customer.BirthDay }}</td>
+                        <td>{{ customer.Email }}</td>
+                        
+                       <td>
+                            <a class="btn btn-primary" 
+                               [routerLink]="['/customerEdit', customer.Id]">
+                                Edit
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
-
-<hr>
-
-<form #customerForm="ngForm">
-    <div class="container" *ngIf="editCustomer">
-        <h3>{{FormHeader}}</h3>
-
-        <table class="table table-condensed">
-            <tbody>
-                <tr>
-                    <td>First Name</td>
-                    <td>
-                        <input type="text" name="FirstName" [(ngModel)]='FirstName'>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Last Name</td>
-                    <td>
-                        <input type="text" name="LastName" [(ngModel)]='LastName'>
-                    </td>
-                </tr>
-                <tr>
-                    <td> Email</td>
-                    <td>
-                        <input type="text" name="Email" [(ngModel)]='Email'>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="hidden" name="Id" [(ngModel)]='Id'>
-                    </td>
-                    <td>
-                        <input type="button" value="Save" (click)="Save(customerForm)">
-                    </td>
-
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</form>

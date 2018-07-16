@@ -20,7 +20,6 @@ namespace Sunwing.ContactManager.WebApi.Filters
                     ReasonPhrase = "Exception"
                 });
             }
-
             throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.InternalServerError)
             {
                 Content = new StringContent("An error occured, please try again or contact administrator"),

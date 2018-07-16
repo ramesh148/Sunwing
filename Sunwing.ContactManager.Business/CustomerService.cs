@@ -31,8 +31,7 @@ namespace Sunwing.ContactManager.Business
         }
 
         public void Delete(Customer customer)
-        {
-            customer.IsActive = false;
+        {            
             unitOfWork.CustomerRepository.Delete(customer);
             unitOfWork.Save();
         }
